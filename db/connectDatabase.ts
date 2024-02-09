@@ -4,8 +4,7 @@ const connectDatabase = async () => {
   try {
     const MONGODB_URI = process.env.MONGODB_ATLAS_URI || "";
     const connection = await mongoose.connect(MONGODB_URI, {
-      dbName: "internHub",
-      bufferCommands: false,
+      dbName: "internHub"
     });
 
     console.log("Database Connected: ", connection.connection.host);
